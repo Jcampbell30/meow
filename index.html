@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="assets/cat.ico" />
+  <title>cat.meow</title>
+  <link rel="preload" as="audio" href="assets/meow.mp3" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" tabindex="0" aria-label="cat meow app">
+    <div class="wrap">
+      <h1 class="brand">cat<span class="dot">.</span>meow</h1>
+
+      <!-- Cat first -->
+      <button id="catBtn" class="cat" aria-label="Meow">🐈‍⬛</button>
+
+      <!-- Counter underneath -->
+      <div class="counter">
+        <div class="label">My Meows</div>
+        <div id="myCount" class="value">0</div>
+      </div>
+
+      <div class="controls">
+        <button id="muteBtn" class="control" aria-pressed="false">🔊 Sound On</button>
+        <button id="resetBtn" class="control">♻️ Reset</button>
+      </div>
+
+      <p class="hint">Click the cat or press <kbd>Space</kbd>/<kbd>Enter</kbd>. Unmute your phone if you don’t hear the meow.</p>
+    </div>
+  </main>
+
+  <audio id="meowAudio" preload="auto">
+    <source src="assets/meow.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
